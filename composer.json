@@ -1,0 +1,15 @@
+{
+    "name": "ramiromd/sfclean",
+    "description": "Proyecto demostración con clean architecture en Symfony",
+    "autoload": {
+        "psr-4": {
+            "Ramiromd\\Sfclean\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ramiro Martínez D'Elía"
+        }
+    ],
+    "require": {}
+}
