@@ -1,0 +1,27 @@
+{
+    "name": "ramiromd/sfclean",
+    "description": "Proyecto demostración con clean architecture en Symfony",
+    "autoload": {
+        "psr-4": {
+            "Ramiromd\\Sfclean\\": "src/",
+            "Ramiromd\\Sfclean\\Rest\\": "api/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ramiro Martínez D'Elía"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "symfony/framework-bundle": "^8.0",
+        "symfony/runtime": "^8.0",
+        "symfony/console": "^8.0",
+        "symfony/yaml": "^8.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true
+        }
+    }
+}

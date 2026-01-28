@@ -1,0 +1,12 @@
+servicies:
+    _defaults:
+        autowire: true
+        autoconfigure: false
+        public: false
+
+    Ramiromd\SfClean\Rest\Controllers:
+        resource: "../src/Controller/"
+        tags: ["controller.service_arguments"]
+
+    Ramiromd\Sfclean\Infraestructure:
+        resource: "../../src/Infrastructure"
