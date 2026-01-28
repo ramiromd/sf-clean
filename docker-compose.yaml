@@ -3,5 +3,7 @@ services:
   api:
     container_name: sf-clean-api
     build: .
+    env_file:
+      - .env
     volumes:
       - ".:/var/www/html"
