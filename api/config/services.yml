@@ -1,0 +1,13 @@
+servicies:
+    _defaults:
+        autowire: true
+        autoconfigure: false
+        public: false
+
+    Ramiromd\Sfclean\Rest:
+        resource: "../src/"
+        exclude:
+            - "../src/Kernel.php"
+
+    Ramiromd\Sfclean\Infraestructure:
+        resource: "../../src/Infrastructure"
