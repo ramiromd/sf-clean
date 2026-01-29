@@ -14,3 +14,7 @@ RUN curl -s https://getcomposer.org/installer -o composer-setup \
 
 WORKDIR /var/www/html
 COPY . .
+
+EXPOSE 9000
+
+CMD ["php-fpm"]
