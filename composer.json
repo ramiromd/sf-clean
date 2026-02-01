@@ -4,6 +4,7 @@
     "autoload": {
         "psr-4": {
             "Ramiromd\\Sfclean\\": "src/",
+            "Ramiromd\\Sfclean\\Test\\": "test/",
             "Ramiromd\\Sfclean\\Rest\\": "api/src/"
         }
     },
@@ -12,6 +13,9 @@
             "name": "Ramiro Martínez D'Elía"
         }
     ],
+    "scripts": {
+        "test:unit" : "./vendor/bin/phpunit --configuration phpunit.xml  --testsuite Unit --testdox"
+    },
     "require": {
         "php": "^8.4",
         "symfony/framework-bundle": "^8.0",
@@ -24,5 +28,9 @@
         "allow-plugins": {
             "symfony/runtime": true
         }
+    },
+    "require-dev": {
+        "ext-xdebug": "*",
+        "phpunit/phpunit": "^12.5"
     }
 }
