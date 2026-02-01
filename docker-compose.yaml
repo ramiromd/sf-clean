@@ -31,9 +31,9 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: sf_clean
-      MYSQL_USER: sf_user
-      MYSQL_PASSWORD: sf_password
+      MYSQL_DATABASE: crowfunding
+      MYSQL_USER: crowfunding_usr
+      MYSQL_PASSWORD: crowfunding_pwd
     ports:
       - "3306:3306"
     volumes:

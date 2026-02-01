@@ -3,7 +3,8 @@ FROM php:8.4-fpm-alpine
 RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
     && apk add --update linux-headers \
     && pecl install xdebug-3.5.0 \
-	&& docker-php-ext-enable xdebug
+	&& docker-php-ext-enable xdebug \
+    && docker-php-ext-install pdo pdo_mysql
 
 RUN apk add bash curl
 
