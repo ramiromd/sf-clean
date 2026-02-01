@@ -1,4 +1,5 @@
-version: '3'
+version: '3.8'
+
 services:
   api:
     container_name: sf-clean-api
@@ -7,6 +8,12 @@ services:
       - .env
     volumes:
       - ".:/var/www/html"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - sf-clean-network
+
   nginx:
     container_name: reverse-proxy
     image: nginx:alpine
@@ -16,3 +23,33 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - api
+    networks:
+      - sf-clean-network
+
+  db:
+    container_name: sf-clean-mysql
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sf_clean
+      MYSQL_USER: sf_user
+      MYSQL_PASSWORD: sf_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+      interval: 10s
+    networks:
+      - sf-clean-network
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  sf-clean-network:
+    driver: bridge
