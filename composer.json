@@ -16,7 +16,8 @@
     ],
     "scripts": {
         "test:unit" : "./vendor/bin/phpunit --configuration phpunit.xml  --testsuite Unit --testdox",
-        "crowfunding:migrations:migrate": "./vendor/bin/doctrine-migrations migrations:migrate --configuration=migrations/migrations.yml --db-configuration=migrations/db.php --no-interaction"
+        "crowfunding:migrations:migrate": "./vendor/bin/doctrine-migrations migrations:migrate --configuration=migrations/migrations.yml --db-configuration=migrations/db.php --no-interaction",
+        "crowfunding:users:seed": "php api/bin/console crowfunding:create-demo-users"
     },
     "require": {
         "php": "^8.4",
