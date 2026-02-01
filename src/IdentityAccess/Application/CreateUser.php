@@ -23,7 +23,7 @@ class CreateUser {
     public function __invoke(CreateUserRequest $request)
     {
         
-        var_dump($this->userRepository);
+
         $userEntity = new User(
             new EntityId($request->getEntityId()),
             new Nickname($request->getNickname()),
@@ -32,9 +32,6 @@ class CreateUser {
             new CreationDate(new DateTimeImmutable($request->getCreationDate()))
         );
 
-        var_dump($userEntity);
-
-
-        throw new \Exception('Not implemented');
+        $this->userRepository->save($userEntity);
     }
 }
