@@ -28,7 +28,9 @@
         "symfony/yaml": "^8.0",
         "ramsey/uuid": "4.9.2",
         "doctrine/migrations": "3.9.5",
-        "symfony/dotenv": "^8.0"
+        "symfony/dotenv": "^8.0",
+        "symfony/password-hasher": "^8.0",
+        "symfony/security-bundle": "^8.0"
     },
     "config": {
         "allow-plugins": {
