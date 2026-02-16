@@ -10,6 +10,9 @@
         name="Ramiromd\Sfclean\IdentityAccess\Domain\Entity\User"
         table="idp_users">
 
+        <!-- TODO: Mantener un ID autoincremental como PK para relaciones físicas gestionado por el motor de BD. -->
+        <!-- TODO: Mantener un UUID único como identificador de la entidad a nivel aplicación. -->
+
         <id name="id" type="entity_id" column="entity_id">
             <generator strategy="NONE"/>
         </id>
