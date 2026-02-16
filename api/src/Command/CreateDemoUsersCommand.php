@@ -61,6 +61,7 @@ class CreateDemoUsersCommand extends Command {
             // Here you would parse the line and create the user accordingly.
             // For demonstration, we just output the line.
             $output->writeln("Creating user from line {$i}: " . trim($line));
+            $i++;
         }
 
 

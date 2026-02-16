@@ -53,4 +53,9 @@ class User
     {
         return $this->creationDate;
     }
+
+    public function setPasswordHash(PasswordHash $passwordHash): void
+    {
+        $this->passwordHash = $passwordHash;
+    }
 }

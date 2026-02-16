@@ -28,3 +28,4 @@ services:
     Ramiromd\Sfclean\IdentityAccess\Application\CreateUser:
         arguments:
             $userRepository: '@Ramiromd\Sfclean\IdentityAccess\Infrastructure\UserRepository'
+            $passwordHasher: '@Ramiromd\Sfclean\IdentityAccess\Infrastructure\SymfonyPasswordHasher'
