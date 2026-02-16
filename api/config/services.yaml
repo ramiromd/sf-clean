@@ -24,6 +24,8 @@ services:
     # please note that last definitions always *replace* previous ones
     Ramiromd\Sfclean\IdentityAccess\Infrastructure\:
         resource: "../../src/IdentityAccess/Infrastructure/"
+    Ramiromd\Sfclean\Shared\Repository\:
+        resource: "../../src/Shared/Repository/"
 
     Ramiromd\Sfclean\IdentityAccess\Application\CreateUser:
         arguments:

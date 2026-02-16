@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doctrine-mapping
+    xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://doctrine-project.org/schemas/orm/doctrine-mapping
+        https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+        name="Ramiromd\Sfclean\IdentityAccess\Domain\Entity\User"
+        table="idp_users">
+
+        <id name="id" type="entity_id" column="entity_id">
+            <generator strategy="NONE"/>
+        </id>
+
+        <field
+            name="nickname"
+            type="user_nickname"
+            column="nickname"
+        />
+
+        <field
+            name="email"
+            type="user_email"
+            column="email"
+        />
+
+        <field
+            name="passwordHash"
+            type="password_hash"
+            column="password_hash"
+        />
+
+        <field
+            name="creationDate"
+            type="creation_date"
+            column="creation_date"
+        />
+
+    </entity>
+</doctrine-mapping>

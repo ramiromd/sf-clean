@@ -6,6 +6,22 @@ doctrine:
     port: '%env(DATABASE_PORT)%'
     dbname: '%env(DATABASE_NAME)%'
     driver: '%env(DATABASE_DRIVER)%'
+    types:
+      user_email: Ramiromd\Sfclean\IdentityAccess\Infrastructure\Repository\Type\EmailType
+      password_hash: Ramiromd\Sfclean\IdentityAccess\Infrastructure\Repository\Type\PasswordHashType
+      user_nickname: Ramiromd\Sfclean\IdentityAccess\Infrastructure\Repository\Type\NicknameType
+      entity_id: Ramiromd\Sfclean\Shared\Repository\Type\EntityIdType
+      creation_date: Ramiromd\Sfclean\Shared\Repository\Type\CreationDateType
   orm:
-    naming_strategy: doctrine.orm.naming_strategy.underscore
-    auto_mapping: false
+    #auto_generate_proxy_classes: '%kernel.debug%'
+    #auto_mapping: false
+    default_entity_manager: default
+    entity_managers:
+      default:
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        mappings:
+          IdentityAccess:
+            is_bundle: false
+            type: xml
+            dir: '%kernel.project_dir%/../src/IdentityAccess/Infrastructure/Repository/mappings'
+            prefix: Ramiromd\Sfclean\IdentityAccess\Domain\Entity
