@@ -23,9 +23,9 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
     Ramiromd\Sfclean\IdentityAccess\Infrastructure\:
-        resource: "../../src/IdentityAccess/Infrastructure"
+        resource: "../../src/IdentityAccess/Infrastructure/"
 
     Ramiromd\Sfclean\IdentityAccess\Application\CreateUser:
         arguments:
-            $userRepository: '@Ramiromd\Sfclean\IdentityAccess\Infrastructure\UserRepository'
+            $userRepository: '@Ramiromd\Sfclean\IdentityAccess\Infrastructure\Repository\UserRepository'
             $passwordHasher: '@Ramiromd\Sfclean\IdentityAccess\Infrastructure\SymfonyPasswordHasher'

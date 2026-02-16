@@ -30,7 +30,10 @@
         "doctrine/migrations": "3.9.5",
         "symfony/dotenv": "^8.0",
         "symfony/password-hasher": "^8.0",
-        "symfony/security-bundle": "^8.0"
+        "symfony/security-bundle": "^8.0",
+        "doctrine/doctrine-bundle": "^3.2",
+        "doctrine/orm": "^3.6",
+        "doctrine/dbal": "^4.4"
     },
     "config": {
         "allow-plugins": {
